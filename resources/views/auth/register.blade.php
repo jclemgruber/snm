@@ -17,24 +17,28 @@
 
             <div class="row">
 
-                <div class="input-field col s12 m6">
+                <div class="input-field col s12">
                   <input id="name" type="text" name="name" class="validate" value="{{ old('name') }}" required autofocus>
                   <label for="name" data-error="Nome inválido">Nome</label>
-                </div>
-
-                <div class="input-field col s12 m6">
-                  <input id="email" type="text" name="email" class="validate" value="{{ old('email') }}" required>
-                  <label for="email" data-error="E-mail inválido">E-mail</label>
                 </div>
 
             </div>
 
             <div class="row">
 
-                <div class="input-field col s12">
-                  <input id="cpf" type="text" name="cpf" class="validate" value="{{ old('cpf') }}" required>
-                  <label for="cpf" data-error="CPF inválido">CPF</label>
+                <div class="input-field col s12 m6">
+                  <input id="email" type="text" name="email" class="validate" value="{{ old('email') }}" required>
+                  <label for="email" data-error="E-mail inválido">E-mail</label>
                 </div>
+
+                <snm-maskinput 
+                    id="cpf" 
+                    label="CPF" 
+                    class="input-field col s12 m6"
+                    mask="000.000.000-00"
+                    value="{{ old('cpf') }}"
+                >                  
+                </snm-maskinput>
 
             </div>
 

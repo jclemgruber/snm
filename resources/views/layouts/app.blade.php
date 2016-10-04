@@ -30,6 +30,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="https://use.fontawesome.com/e0f22e2070.js"></script>
     <script type="text/javascript">
 
       $( document ).ready(function(){

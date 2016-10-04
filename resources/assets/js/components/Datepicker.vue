@@ -8,7 +8,6 @@
           :placeholder="placeholder ? placeholder : null"
           v-model="value"
     >
-    <span>{{ value }}</span>
 </div>
 
 </template>

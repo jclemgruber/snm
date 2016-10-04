@@ -7,6 +7,7 @@
           <li><a href="{{ url('/login') }}">Login</a></li>
           <li><a href="{{ url('/register') }}">Registre-se</a></li>
       @else
+          <li><a href="{{ url('/temas') }}">Temas</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{ Auth::user()->name }}
                 <i class="material-icons right">arrow_drop_down</i>
               </a>
@@ -36,7 +37,7 @@
           <li><a href="{{ url('/register') }}">Registre-se</a></li>
       @else
           <li><div class="userView">
-                <a href="#!user"><img class="circle" src=""></a>
+                <a href="#!user"><img class="circle" src="/img/no-picture.jpg"></a>
                 <a href="#!name"><span class="name">{{ Auth::user()->name }}</span></a>
                 <a href="#!email"><span class="email">{{ Auth::user()->email }}</span></a>
               </div>

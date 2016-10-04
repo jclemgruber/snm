@@ -14,16 +14,19 @@ require('./bootstrap');
  */
 
 //Vue.component('example', require('./components/Example.vue'));
-//Vue.component('sm-datepicker', require('./components/Datepicker.vue'));
-//var UiTextbox 	= require('keen-ui').UiTextbox;
-//var UiAlert 	= require('keen-ui').UiAlert;
-  	/*components: {
-  		'ui-textbox': UiTextbox,
-  		'ui-alert': UiAlert
-  	}*/
+Vue.component('snm-datepicker', require('./components/Datepicker.vue'));
+Vue.component('snm-maskinput', 	require('./components/Maskinput.vue'));
+Vue.component('snm-editor', 	require('./components/Editor.vue'));
+
+var UiTextbox 	= require('keen-ui').UiTextbox;
+var UiAlert 	= require('keen-ui').UiAlert;
 
 new Vue({
   el: 'body',
-  
+
+  components: {
+	'ui-textbox': UiTextbox,
+  	'ui-alert': UiAlert
+  },
 })
 

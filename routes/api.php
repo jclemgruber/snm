@@ -18,6 +18,8 @@ use Illuminate\Http\Request;
 })->middleware('auth:api');*/
 
 Route::group(['middleware' => 'cors'], function(){
+
+	Route::post('register', 'Auth\RegisterController@registerFromApi');
 	Route::post('token', 'AuthenticateController@authenticate');
 
 	Route::group(['middleware' => 'jwt.auth'], function(){
@@ -25,6 +27,6 @@ Route::group(['middleware' => 'cors'], function(){
 			return $request->user();
 		});
 	});
-	
+		
 });
 

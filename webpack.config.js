@@ -1,10 +1,18 @@
 var webpack = require('webpack');
 
-module.exports = {
-	plugins: [
-		new webpack.ProvidePlugin({
-			'window.$': 'jquery',
-			'window.jQuery': 'jquery'
-		})
-	],
-}
+Elixir.webpack.mergeConfig({
+  module: {
+    loaders: [{
+      test: /resource\/vendor\/js\/.+\.(jsx|js)$/,
+      loader: 'imports?jQuery=jquery,$=jquery,this=>window'
+    }]
+  },
+
+  plugins: [
+    new webpack.ProvidePlugin({
+        'window.jQuery': 'jquery',
+        'window.$': 'jquery',
+    }),
+  ],
+
+});
