@@ -41,9 +41,10 @@ class TemaController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'subscription_start_date' => 'required|date',
-            //'subscription_start_date' => 'require|date_format:d/m/Y|before:subscription_end_date',
-            //'subscription_end_date' => 'require|date_format:d/m/Y|after:subscription_start_date'
+            'subscription_start_date' => 'required|date_format:d/m/Y|before:subscription_end_date',
+            'subscription_end_date' => 'required|date_format:d/m/Y|after:subscription_start_date',
+            'event_start_date' => 'required|date_format:d/m/Y|before:event_end_date',
+            'event_end_date' => 'required|date_format:d/m/Y|after:event_start_date'
         ]);
     }
 
